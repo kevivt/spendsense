@@ -1,0 +1,13 @@
+credentials.json
+token.json
+spendsense.db
+chroma_store/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+*.key
+*apikey*
+*api_key*
+secrets.json

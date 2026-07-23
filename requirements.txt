@@ -1,0 +1,10 @@
+google-auth
+google-auth-oauthlib
+google-api-python-client
+ollama
+chromadb
+sentence-transformers
+fastapi
+uvicorn
+beautifulsoup4
+python-dotenv

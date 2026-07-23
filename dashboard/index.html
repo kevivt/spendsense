@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpendSense</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="ticker">
+    <div class="ticker-brand">
+      <span class="ticker-mark">◆</span>
+      <span class="ticker-name">SPENDSENSE</span>
+    </div>
+    <div class="ticker-total">
+      <span class="ticker-label">TOTAL THIS MONTH</span>
+      <span class="ticker-amount" id="grand-total">₹ ---.--</span>
+    </div>
+    <div class="ticker-controls">
+      <select id="month-select" class="month-select"></select>
+      <button id="sync-btn" class="sync-btn">SYNC</button>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <section class="panel ledger" id="ledger-panel">
+      <div class="panel-heading">
+        <span class="panel-eyebrow">01</span>
+        <h2>Ledger</h2>
+      </div>
+
+      <div id="platform-cards" class="platform-cards">
+        <!-- filled by script.js -->
+      </div>
+
+      <div class="empty-state" id="ledger-empty" hidden>
+        <p>No orders recorded for this month yet.</p>
+        <p class="empty-sub">Hit SYNC to pull the latest from Gmail.</p>
+      </div>
+    </section>
+
+    <div class="tear-divider" aria-hidden="true">
+      <span class="tear-dot"></span><span class="tear-dot"></span><span class="tear-dot"></span>
+      <span class="tear-dot"></span><span class="tear-dot"></span><span class="tear-dot"></span>
+      <span class="tear-dot"></span><span class="tear-dot"></span><span class="tear-dot"></span>
+      <span class="tear-dot"></span><span class="tear-dot"></span><span class="tear-dot"></span>
+    </div>
+
+    <section class="panel console" id="console-panel">
+      <div class="panel-heading">
+        <span class="panel-eyebrow">02</span>
+        <h2>Ask SpendSense</h2>
+      </div>
+
+      <div class="chat-log" id="chat-log">
+        <div class="chat-msg agent">
+          <span class="chat-tag">AGENT</span>
+          <p>Ask me anything about your food delivery spending — "how much did I spend on Swiggy in June?" or "show me orders like healthy bowls."</p>
+        </div>
+      </div>
+
+      <form class="chat-input-row" id="chat-form">
+        <input type="text" id="chat-input" class="chat-input" placeholder="Ask a question..." autocomplete="off">
+        <button type="submit" class="chat-send">SEND</button>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
